@@ -1,8 +1,8 @@
-const CACHE_NAME = 'dg-sentinel-v3-cache-v3.2';
+const CACHE_NAME = 'dg-sentinel-v3-cache-v3.3';
 const ASSETS_TO_CACHE = [
   './index.html',
   './css/style.css',
-  './js/app.js',
+  './js/app.js?v=3.3',
   './data/trades.json',
   './manifest.json'
 ];
