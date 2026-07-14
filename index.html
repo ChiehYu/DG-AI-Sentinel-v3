@@ -25,9 +25,9 @@
     <!-- ======================================================= -->
     <!-- 頂部導航與狀態列 -->
     <!-- ======================================================= -->
-    <header class="flex flex-col xl:flex-row justify-between items-center mb-4 flex-shrink-0 gap-4 border-b border-gray-800 pb-3">
-        <div class="flex flex-col sm:flex-row items-center gap-6 w-full xl:w-auto justify-between sm:justify-start">
-            <div class="flex items-center gap-3">
+    <header class="flex flex-col gap-3.5 mb-4 flex-shrink-0 border-b border-gray-800 pb-3.5">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-4 w-full">
+            <div class="flex items-center gap-3 w-full lg:w-auto justify-between lg:justify-start">
                 <svg class="w-10 h-10 filter drop-shadow-[0_0_8px_rgba(34,211,238,0.6)] flex-shrink-0" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="100" height="100" rx="22" fill="#151924" stroke="#2a2e39" stroke-width="2"/>
                     <path d="M30 25 C45 20 55 20 70 25 C70 55 50 78 50 78 C50 78 30 55 30 25 Z" stroke="url(#dgGlow)" stroke-width="4" stroke-linejoin="round" fill="none"/>
@@ -40,29 +40,29 @@
                         </linearGradient>
                     </defs>
                 </svg>
-                <div>
+                <div class="flex-grow">
                     <div class="flex items-center gap-2 flex-wrap">
                         <h1 class="text-xl sm:text-2xl font-black text-white tracking-widest glow-text">DG AI Sentinel</h1>
-                        <span class="bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-extrabold text-[10px] px-2 py-0.5 rounded-full shadow-md">v3.0 旗艦版</span>
-                        <span class="bg-yellow-500/20 text-yellow-400 border border-yellow-500/40 text-[10px] font-bold px-2 py-0.5 rounded-full">200萬信貸專用</span>
+                        <span class="bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-extrabold text-[10px] px-2 py-0.5 rounded-full shadow-md whitespace-nowrap">v3.0 旗艦版</span>
+                        <span class="bg-yellow-500/20 text-yellow-400 border border-yellow-500/40 text-[10px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap">200萬信貸專用</span>
                     </div>
-                    <p class="text-[10px] text-gray-400 font-bold tracking-wider">為姜杰佑 (ChiehYu) 打造之全螢幕即時監控與盤後分析系統</p>
+                    <p class="text-[10px] sm:text-xs text-gray-400 font-bold tracking-wider sm:whitespace-nowrap">為姜杰佑 (ChiehYu) 打造之全螢幕即時監控與盤後分析系統</p>
                 </div>
             </div>
 
             <!-- 分頁切換器 (即時 vs 盤後/信貸專區) -->
-            <div class="flex bg-[#151924] p-1 rounded-xl border border-gray-700 shadow-inner w-full sm:w-auto justify-center">
-                <button onclick="switchTab('realtime')" id="tabBtnRealtime" class="flex-1 sm:flex-none px-4 py-1.5 rounded-lg font-extrabold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 bg-blue-600 text-white shadow-md">
+            <div class="flex bg-[#151924] p-1 rounded-xl border border-gray-700 shadow-inner w-full lg:w-auto justify-center flex-shrink-0">
+                <button onclick="switchTab('realtime')" id="tabBtnRealtime" class="flex-1 lg:flex-none px-4 sm:px-5 py-1.5 rounded-lg font-extrabold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 bg-blue-600 text-white shadow-md">
                     ⚡ 即時行情與 K 線防守
                 </button>
-                <button onclick="switchTab('analytics')" id="tabBtnAnalytics" class="flex-1 sm:flex-none px-4 py-1.5 rounded-lg font-extrabold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 text-gray-400 hover:text-white">
+                <button onclick="switchTab('analytics')" id="tabBtnAnalytics" class="flex-1 lg:flex-none px-4 sm:px-5 py-1.5 rounded-lg font-extrabold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 text-gray-400 hover:text-white">
                     📊 盤後與 200 萬信貸流速
                 </button>
             </div>
         </div>
 
         <!-- 頂部操作工具列 -->
-        <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-between sm:justify-end w-full xl:w-auto">
+        <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-between sm:justify-end w-full pt-0.5">
             <div class="flex items-center gap-2 bg-[#151924] p-1.5 rounded-lg border border-gray-700 shadow-inner flex-wrap">
                 <select id="quickSelector" onchange="quickSelectStock()" class="bg-transparent text-gray-200 text-xs sm:text-sm font-bold outline-none border-r border-gray-600 pr-2 cursor-pointer">
                     <option value="">🚀 選擇核心持股 ▼</option>
